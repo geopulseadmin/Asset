@@ -1,0 +1,1058 @@
+.leaflet-control-zoom {
+  position: absolute; /* Fixes the control's position relative to the viewport */
+  left: 96.500vw; /* Adjust position horizontally from the left edge of the viewport */
+  top: 85vh; /* Adjust position vertically from the top edge of the viewport */
+  border: 2px solid #0077da !important; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  background-color: white; /* Background color to make it stand out */
+  z-index: 1000;
+}
+.leaflet-control-layers-toggle {
+  top: 0;
+}
+.leaflet-control-attribution a {
+  text-decoration: none;
+  display: none;
+}
+
+.leaflet-control-layers-list {
+  width: 140px;
+  height: 170px;
+
+  /* overflow-y: scroll; */
+  /* scrollbar-width: thin; */
+  font-size: 9px;
+  padding: 0px;
+  /* color: darkblue; */
+}
+
+.leaflet-control-layers-overlays {
+  width: 100%;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0;
+height: 100vh !important;
+overflow: hidden;
+/* padding: 10px; */
+background-color: #e8f5e9;
+}
+
+.info{
+   
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    top: 6.1vh;
+    left: 55px;
+    height: 500px;
+    width: 227px;
+    overflow: auto;
+    scrollbar-width: thin;
+    background-color: white;
+    /* scrollbar-color: rgb(22, 49, 64) white; */
+    border-radius: 0px;
+
+}
+
+.main-content {
+display: flex;
+width: 100vw;
+max-width: 98vw;
+transition: all 0.3s ease;
+}
+.name {
+  margin-left: 5%;
+  margin-top: 15px;
+  font-size: 20px;
+  font-style: normal;
+  /* font-weight: 500; */
+  line-height: normal;
+}
+.map-container {
+width: 100vw;
+position: relative;
+}
+
+
+leaflet-touch .leaflet-bar a:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  MARGIN-TOP: -10PX;
+}
+
+.tablestats {
+/* color: #04c; */
+
+font-size: 0%;
+color: #262626;
+font-weight: bold;
+text-shadow: black;
+/* text-transform: uppercase; */
+
+/* position: fixed; color: darkblue; font-size: 12px;font-weight: bold;  z-index: 9999; margin-top: 45px; margin-left:0px; */
+}
+.filters {
+  width: 18vw;
+  margin-left: 4.400% !important;
+  background-color: white;
+  padding: 0px;
+  margin-top: 55px;
+
+  position: absolute;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* z-index: 999; */
+  opacity: 0;
+  transition: margin-left 0.3s ease, opacity 0.3s ease;
+}
+
+.filters h3 {
+font-size: 22px !important;
+margin-top: 10px;
+color:#000000;
+}
+
+.accordion {
+width: 100%;
+}
+
+.accordion-item {
+border-top: 1px solid #ccc;
+}
+.accordion-item:first-child {
+border-top: none;
+}
+
+.accordion-header {
+width: 100%;
+text-align: left;
+padding: 10px;
+background-color: #f1f1f1;
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+.accordion-content {
+display: none;
+padding: 10px;
+background-color: white;
+border-top: 1px solid #ccc;
+}
+
+.toggle-button {
+  position: relative;
+  top: 14vh;
+  right: 49px;
+  z-index: 1000;
+  border: none;
+  background: none;
+  color:#8AC0EE;
+  font-size: 21px;
+  border-radius: 5px;
+}
+
+.toggle-button1 {
+  position: relative;
+  top: 20vh;
+  right: 87px;
+  z-index: 1000;
+  border: none;
+  background: none;
+  color:#8AC0EE;
+  font-size: 21px;
+  border-radius: 5px;
+}
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+}
+button, select {
+  text-transform: none;
+}
+/* leaflet zoom */
+
+
+#openTableBtn {
+  position: absolute;
+  z-index: 999;
+  border: none;
+  top: 77vh;
+  width: auto;
+  padding: 6px;
+  right: -30px;
+  background: none ;
+ 
+ 
+  }
+  
+.tablebtn {
+width: 44px;
+height: 44px;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+padding: 30px 10px;
+
+}
+
+.SearchBar #searchInputDashboard {
+  margin-left: 5px;
+ 
+  height: 40px !important;
+  width: 13% !important;
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  text-align: center;
+  padding-left: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: translateX(-50%);
+  border: 2px solid #0077da;
+ }
+/* html */
+
+.filters {
+  margin-bottom: 20px;
+
+}
+
+
+
+.filter-group {
+  /* margin-bottom: 20px; */
+  padding: 5px;
+ 
+  background: #E6F1FB;
+  font-size: 10px;
+}
+.filter-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.filter-group ul {
+list-style-type: none;
+padding: 0;
+display: none;
+}
+.filter-group ul.active,
+.filter-group input[type="text"].active {
+display: block;
+forced-color-adjust: blue;
+}
+.filter-group li {
+  margin-bottom: 5px;
+}
+
+.icon-container {
+position:absolute;
+right:1%; 
+top:0%;
+font-size: 15px;
+}
+
+/* Style the icon */
+.icon-container i {
+color: black; /* Default color */
+}
+
+.abcscroll {
+  height: auto;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #8AC0EE #f1f1f1;
+}
+
+.abcscroll::-webkit-scrollbar {
+  width: 5px;
+}
+.abcscroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.abcscroll::-webkit-scrollbar-thumb {
+  background-color: #8AC0EE;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+}
+
+/* For Firefox */
+/* .abcscroll {
+ 
+} */
+
+#daterange {
+z-index: 9999;
+position: fixed !important;
+padding: 16px;
+font-size: 13px !important;
+left: 34%;
+top: 2.3%;
+width: 15% !important;
+border: 2px solid darkblue;
+border-radius: 10px;
+height: 3%;
+}
+thead th {
+position: sticky !important;
+padding: 0%;
+top: 10%;
+background-color: #506be7;
+z-index: 2;
+}
+
+
+#tablecontainer {
+  z-index: 9999;
+  position: absolute;
+  width: 35%;
+  bottom: 24%;
+  right: 4%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+
+.tableDetail {
+max-height: 550px; 
+overflow-y: auto; 
+/* margin-top: 10px;  */
+border: 1px solid #ccc; 
+background-color: #f9f9f9; 
+
+}
+
+.minimize-button {
+background-color:#8AC0EE;
+color: white;
+border: none;
+padding: 5px;
+cursor: pointer;
+font-size: 15px;
+/* border-radius: 50%; */
+position: absolute;
+right: 0%;
+top:4%;
+z-index: 1000;
+width: 27px;
+height:28px;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+} 
+
+
+.download-button
+ {
+  background-color:#8AC0EE;
+  /* background-color: darkblue; */
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  /* border-radius: 50%; */
+  position: absolute;
+  right: 9%;
+  top:4%;
+  z-index: 1000;
+  width: 27px;
+  height:28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  } 
+
+.data-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+
+.data-table th {
+/* background-color: #f2f2f2; */
+background-color:#E6F1FB;
+color: var(--Blue-500, #0077DA);
+/* font-family: Roboto; */
+font-size: 10px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-align: center;
+/* border-top: 1px solid grey; */
+text-transform: uppercase;
+font-weight: bold;
+
+
+
+}
+
+
+
+.dataTables_wrapper .dataTables_scrollHead {
+overflow: visible;
+}
+
+.dataTables_wrapper .dataTables_scrollBody {
+overflow: auto;
+scrollbar-width: thin;
+text-align: center;
+height: 248px;
+max-height: 248px; /* Match this with the tableDetail max-height */
+}
+
+.dataTables_wrapper .dataTables_scrollFoot {
+overflow: visible;
+}
+
+
+
+
+/* table------------------------------------------- */
+.leaflet-popup-content-wrapper {
+padding: 1px;
+text-align: left;
+height: auto;
+border: 2px solid #8AC0EE;
+max-height: 400px;
+border-radius: 12px;
+overflow-y: scroll;
+overflow-x: hidden;
+scrollbar-width: thin;
+width: auto;
+
+max-width: 400px;
+font-size: 10px;
+}
+.leaflet-popup-tip {
+  width: 17px;
+  height: 17px;
+  padding: 1px;
+  border: 2px solid #8AC0EE;
+  margin: -10px auto 0;
+  pointer-events: auto;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.leaflet-popup-content-wrapper tr,
+td {
+border-bottom: 1px solid;
+padding: 5px;
+color: var(--Grey-900, #161616);
+/* font-family: Roboto; */
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-left: 2px;
+/* text-align: left; */
+}
+
+.leaflet-popup-content-wrapper tr td:not(:last-child) {
+border-right: 1px solid;
+}
+
+
+.geopulseaname {
+  
+  position: fixed;
+  z-index: 99999;
+  bottom: 1vh;
+  /* margin-top: 670px; */
+  right: 9px;
+  text-decoration: none;
+
+  color: blue;
+
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.logopng {
+  height: 48px;
+  width: 48px;
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  z-index: 9999;
+  top: 3px;
+  left: -3%;
+}
+
+#autocomplete-list {
+  position: absolute;
+  z-index: 9999;
+  margin-left:100px;
+  height: auto;
+  border-radius: 10px;
+  width: auto;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 9999;
+  top: 98.5%;
+  left: 61%;
+  background-color: #fff;
+  /* text-align: left; */
+  width: 250px;
+  max-width: 230px;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* scrollbar-color: #8ac0ee #f1f1f1;  */
+  /* scrollbar-width: thin; */
+  line-height: 2.5;
+ }
+ #autocomplete-list:hover {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #8ac0ee #f1f1f1;
+
+}
+.autocomplete-items li {
+  cursor: pointer;
+  list-style: circle;
+}
+
+ /* Scrollbar styles for WebKit browsers */
+#autocomplete-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+#autocomplete-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#autocomplete-list::-webkit-scrollbar-thumb {
+  background-color:#8ac0ee;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.filter_div{
+  height: auto; 
+  max-height: 65vh;
+  overflow: hidden;
+  transition: overflow 0.3s ease;
+
+}
+.filter_div:hover {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+
+}
+.SearchBar1 {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 9999;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  border: 1px solid black;
+  background: white;
+  border-radius: 5px 5px 5px 5px;
+}
+.SearchBar .form-select,
+.SearchBar .form-control,
+.SearchBar .btn {
+margin-right: 5px;
+font-size: 12px;
+font-weight: bold;
+width: 1% !important;
+height: 71.5%;
+position: absolute;
+top:10px;
+left: 65%;
+border-left: 2px solid #0077da;
+border-right: 2px solid #0077da ;
+border-top: 2px solid #0077da;
+border-bottom: 2px solid #0077da ;
+z-index: 9999999;
+border-radius: 0;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+}
+.SearchBar #searchInputDashboard {
+  
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+ 
+  width: 15%;
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  text-align: left;
+  padding-left: 15px;
+  left: 73.5%;
+  transform: translateX(-50%);
+  border: 2px solid #0077da;
+ }
+
+  /* styles.css */
+
+
+.user-profile {
+  display: flex;
+
+  background-color: #fff;
+  
+  top: 12px;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 91%;
+  font-size: 20px;
+
+}
+
+.username {
+  margin: 0;
+  color: var(--Grey-800, #262626);
+  /* font-family: Roboto; */
+  font-size: 16px;
+  font-weight: 500;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+  color: black; 
+}
+.leaflet-bar .leaflet-control{
+  top: 90px;
+}
+.dataTables_length{
+  display: none;
+}
+#map {
+  height: 100vh;
+}
+
+/* Styling for the expanded layers control */
+.leaflet-control-layers-expanded {
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+ 
+  border: 2px solid #0077da !important;
+  background-clip: padding-box;
+}
+
+/* Styling for each label in the layers list */
+.leaflet-control-layers-expanded .leaflet-control-layers-list label {
+  display: block;
+  padding: 5px 0;
+}
+
+/* Flexbox for the span inside the label */
+.leaflet-control-layers-expanded .leaflet-control-layers-list label span {
+  display: flex;
+  align-items: center;
+}
+
+/* Margin for the input inside the span */
+.leaflet-control-layers-expanded .leaflet-control-layers-list label span input {
+  margin-right: 10px;
+}
+
+/* Hover effect for the toggle button */
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle:hover {
+  background-color: #eee;
+}
+
+
+
+/* Custom checkbox styling */
+.leaflet-control-layers-expanded .leaflet-control-layers-list label span input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #151616;
+  /* border-radius: 4px; */
+  position: relative;
+  outline: none;
+  margin-right: 10px;
+}
+
+/* Checkbox checked state */
+.leaflet-control-layers-expanded .leaflet-control-layers-list label span input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Checkbox checked state icon */
+.leaflet-control-layers-expanded .leaflet-control-layers-list label span input[type="checkbox"]:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 0;
+  color: white;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  font-size: 12px;
+}
+.collapse-button.leaflet-control {
+  top: 10px;
+  left: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  background: none; 
+  border: none; 
+  padding: 0; 
+  outline: none; 
+  box-shadow: none; 
+}
+
+.collapse-button.leaflet-control i {
+  font-size: 20px; 
+  color: darkblue; 
+}
+.collapse-button.leaflet-control {
+  top: 10px;
+  left: 8px;
+  margin-left: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.collapse-button.leaflet-control i {
+  color: darkblue;
+  font-size: 20px; 
+
+}
+
+.collapse-button.leaflet-control:focus,
+.collapse-button.leaflet-control:active,
+.collapse-button.leaflet-control:visited {
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.collapse-button.leaflet-control:hover {
+  background: none;
+}
+
+
+.filter-input.active {
+  display: block;
+}
+
+
+#filters {
+  margin-left: -35vw;
+  opacity: 0; 
+  transition: margin-left 0.3s ease, opacity 0.3s ease;
+}
+
+#filters.active {
+  margin-left: 0;
+  opacity: 1;
+}
+
+.leaflet-control-layers {
+    position: fixed !important;
+    top: 55px; /* Adjust as needed */
+    right:-2px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other elements */
+    background: white; /* Optional: to match your design */
+   
+    border-radius: 5px; /* Optional: for rounded corners */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3); /* Optional: for a slight shadow effect */
+}
+.leaflet-retina .leaflet-control-layers-toggle {
+  background-image: url('./png/Layers_Icon.png') !important;
+  background-size: 40px 40px !important;
+  width: 33px !important; 
+  height: 32px !important; 
+  
+}
+
+
+#filters {
+  margin-left: 20vw; 
+  opacity: 0;
+  transition: margin-left 0.3s ease, opacity 0.3s ease; 
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #f8f9fa; 
+  z-index: 1000; 
+}
+
+#filters.active {
+  margin-left: 0;
+  opacity: 1;
+}
+
+#map {
+  transition: margin-left 0.3s ease;
+  margin-left: 0; 
+}
+
+#map.shifted {
+  margin-left: 18vw; 
+}
+.select2-option-checkbox {
+    appearance: none; 
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+.select2-option-checkbox:checked {
+    background-color:#0077DA; 
+    border-color:black 
+}
+
+.select2-option-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    top: 38%;
+    left: 56%;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0; 
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.user-profile {
+  display: flex;              
+       
+  justify-content: flex-start; 
+}
+
+.username {
+         
+  font-size: 20px;
+  margin-top: 5px;
+  color:#262626;                
+}
+
+.icon {
+   font-size: 30px; 
+  margin-top: 5px;        
+  color: #222222;                
+}
+.stat-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background-color: #f0f8ff;
+  /* border: 1px solid #ccc;  */
+  border-radius: 5px;
+  padding: 10px; 
+  color: #0077da;
+  font-size: 14px; 
+}
+
+.stat-label {
+  margin-right: 10px; 
+  font-weight: bold; 
+  color: #0077da;
+}
+
+.stat-value {
+  background-color: #8AC0EE; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  padding: 5px 10px; 
+  min-width: 85px; 
+  text-align: center;
+  color: black;
+  font-weight: bold; 
+}
+.dataTables_filter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  width: 100%;
+}
+.dataTables_wrapper .dataTables_filter input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: transparent;
+  margin-left: 12px !important;
+  margin-top: 6px !important;
+}
+
+.dataTables_filter label {
+  margin-left: 10px;
+  /* display: flex; */
+  align-items: center;
+}
+.dataTables_wrapper .dataTables_filter input {
+  border: 1px solid #aaa;
+  border-radius: 8px !important;
+  margin-top: 2px;
+  padding: 2px, 8px, 2px, 8px !important;
+  margin-left: 3px;
+}
+.dataTables_wrapper.no-footer div.dataTables_scrollHead table.dataTable, .dataTables_wrapper.no-footer div.dataTables_scrollBody > table {
+  border-bottom: none;
+  margin-top: 5px;
+}
+.dataTables_info{
+  display: none;
+}
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+  /* border: 2px solid rgba(0, 0, 0, 0.2); */
+   scrollbar-width: thin;
+   scrollbar-color: #00325C;
+
+  overflow-y: auto;
+  background-clip: padding-box;
+}
+
+.dataTables_scrollBody {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: -6px;
+  max-height: 400px; /* or your desired height */
+}
+.tableDetail {
+ /* Adjust height as needed */
+  max-width: 100%; /* Adjust width as needed */
+  overflow-x: auto;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+
+
+}
+
+.data-table {
+  width: 100%; /* Ensure table takes full width of the container */
+  border-collapse: collapse; /* Ensure borders do not overlap */
+}
+
+.data-table th, .data-table td {
+  padding: 8px; /* Adjust padding as needed */
+  border: 1px solid #ddd; /* Ensure proper border for cells */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.data-table th {
+  background-color: #f1f1f1; /* Different background color for headers */
+  position: sticky; /* Ensure headers stay fixed while scrolling */
+  top: 0;
+  z-index: 1; /* Ensure headers are above other content */
+}
+
+.filters {
+  position: relative;
+  padding: 10px;
+  max-width: 300px;
+  /* margin: 20px auto; */
+  display: none; /* Initially hidden */
+}
+
+.filters.active {
+  display: block !important; /* Show when active */
+}
+
+.filters h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+
+.filter-group {
+  margin-bottom: 5px;
+}
+
+.filter-input {
+  width: 80%;
+  padding: 5px;
+  font-size: 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: none;
+ 
+}
+
+.select2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Initially hidden */
+}
+
+.icon-container {
+  margin-left: 5px;
+  transition: transform 0.3s; /* Smooth rotation */
+}
+
+.icon-container.rotate i {
+  transform: rotate(180deg); /* Rotate 180 degrees */
+}
+
+.leaflet-control-layers-list {
+  display: none; /* Hidden by default */
+}
+
+.leaflet-control-layers-list.open {
+  display: block; /* Show when open */
+}
+
+#data-table tbody tr:hover {
+  background-color: #E6F1FB;
+  cursor: pointer;
+}
+
