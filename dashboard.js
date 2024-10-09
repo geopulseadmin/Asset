@@ -756,23 +756,23 @@ function showtable(typeName, geoServerURL, cqlFilter, headers) {
           headers.forEach(header => {
             // Convert header to camelCase or other naming convention if necessary
             let propertyName = header.replace(/ /g, '');
-            if (header === 'length') {
+            if (header === 'label') {
               mappedData[propertyName] = (feature.properties[header]).toFixed(2); // Format to two decimal places
           } else {
               mappedData[propertyName] = feature.properties[header];
           }
           });
           mappedData.geometry = feature.geometry;
-          work_id.push(feature.properties.link_no)
+          work_id.push(feature.properties.label)
 
           return mappedData;
         });
 
         const shapeAreaSum = data.features.reduce((sum, feature) => {
-          return sum + feature.properties.length;
+          return sum + feature.properties.label;
         }, 0);
         let uniqueCount = new Set(work_id).size;
-        console.log(work_id.length, "lllllllllllll",work_id,uniqueCount)
+        console.log(work_id.label, "lllllllllllll",work_id,uniqueCount)
         document.getElementById('tablestats').innerHTML = `
         
         <div class="stat-button">

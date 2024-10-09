@@ -48,6 +48,7 @@ var Assets= L.tileLayer.wms("https://iwmsgis.pmc.gov.in/geoserver/PMC_test/wms",
   transparent: true,
   tiled: true,
   version: "1.1.0",
+  maxZoom:21,
   opacity: 1
 }).addTo(map);
 
