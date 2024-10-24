@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+     * {
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(174.73% 96.67% at 71.15% 56.01%, #FFF 0%, #FFF 20.65%, #24A148 100%); /* Gradient background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.footer {
+    width: 100%;
+    padding: 20px 100px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #393939;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.header {
+    text-align: center;
+    color: #262626;
+}
+
+.header h1 {
+    font-size: 60px;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.header h2 {
+    color: #393939;
+    font-size: 20px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.login-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px; /* Fixed width for larger screens */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.login-section img {
+    width: 300px;
+    height: 300px;
+}
+
+.divider {
+    width: 300px;
+    height: 0;
+    transform: rotate(-90deg);
+    opacity: 0.70;
+    border: 1px #172554 solid;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+}
+
+.form-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    color: #262626;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px #8D8D8D solid;
+    color: #8D8D8D;
+    font-size: 12px;
+}
+
+.button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(90deg, #1D4ED8 0%, #3B82F6 100%);
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #3B82F6;
+}
+
+.footer-text {
+    text-align: center;
+    color: #393939;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.register-text {
+    text-align: center;
+    color: #393939;
+    font-size: 12px;
+}
+
+.register-link {
+    color: #262626;
+    font-weight: 600;
+}
+
+.forgot-password {
+    text-align: center;
+    color: #393939;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+@media (min-width: 1024px) { /* Large laptops */
+    .login-section {
+        width: 1000px; /* Maintain design for larger laptops */
+    }
+}
+
+@media (min-width: 768px) { /* Large laptops */
+    .login-section {
+        width: 1000px; /* Maintain design for larger laptops */
+    }
+}
+@media (min-width: 1440px) { /* Large laptops */
+    .login-section {
+        width: 1000px; /* Maintain design for larger laptops */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome back!</h1>
+            <h2>We're here for you, now & always!</h2>
+        </div>
+        <div class="login-section">
+            <img src="png/image 1.png" alt="Placeholder Image" />
+            <div class="divider"></div>
+            <div class="login-form">
+                <h3 style="color: #262626; font-size: 40px; font-weight: 500;">Login to your account</h3>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter your email here" />
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Your password" />
+                </div>
+                <button class="button">Login to Your Account</button>
+                <div class="register-text">
+                    <span>Don’t have an account yet? </span>
+                    <span class="register-link">Register now!</span>
+                </div>
+            </div>
+        </div>
+        <div class="forgot-password">Forgot Password?</div>
+    </div>
+    <div class="footer">
+        <div>Privacy Policy</div>
+        <div>©2024 Amanora</div>
+    </div>
+</body>
+</html>

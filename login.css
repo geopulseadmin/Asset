@@ -1,0 +1,185 @@
+/* Ensure that html and body take the full height */
+/* Ensure that html and body take the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(174.73% 96.67% at 71.15% 56.01%, #FFF 0%, #FFF 20.65%, #24A148 100%); /* Gradient background */
+}
+
+/* Container Styles */
+.login-container {
+    width: 100%;
+    min-height: 100vh; /* Ensure full viewport height */
+    position: relative;
+}
+
+
+
+/* Footer */
+.footer-links {
+    width: 1440px;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: absolute;
+    top: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.privacy-policy, .copyright {
+    color: #393939;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 40px;
+    position: absolute;
+    left: 180px;
+    /* top: 183px; */
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-welcome {
+    color: #262626;
+    font-size: 60px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.sub-welcome {
+    color: #393939;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+/* Login Section */
+.login-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+}
+
+.login-image {
+    width: 300px;
+    height: 300px;
+}
+
+.divider {
+    width: 300px;
+    height: 0;
+    transform: rotate(-90deg);
+    border: 1px solid #172554;
+    opacity: 0.7;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.form-title {
+    color: #262626;
+    font-size: 40px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    color: #262626;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.input-box {
+    width: 400px;
+    padding: 8px 16px;
+    border: 1px solid #8D8D8D;
+    border-radius: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #8D8D8D;
+    font-size: 12px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+/* Login Button */
+.login-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: linear-gradient(90deg, #1D4ED8 0%, #3B82F6 100%);
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.arrow-icon {
+    width: 25px;
+    height: 20px;
+    border: 2px solid white;
+    transform: rotate(-90deg);
+}
+
+/* Register Text */
+.register-text {
+    text-align: center;
+    color: #393939;
+    font-size: 12px;
+    font-family: Montserrat;
+    font-weight: 300;
+}
+
+.register-text strong {
+    color: #262626;
+    font-weight: 600;
+}
+
+/* Forgot Password */
+.forgot-password {
+    color: #393939;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 400;
+    text-decoration: underline;
+    margin-top: 20px;
+}
