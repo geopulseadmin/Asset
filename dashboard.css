@@ -587,6 +587,7 @@ font-weight: bold;
 width: 1% !important;
 height: 71.5%;
 position: absolute;
+outline: none !important;
 top:10px;
 left: 65%;
 border-left: 2px solid #0077da;
